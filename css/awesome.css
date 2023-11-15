@@ -137,3 +137,64 @@ a {
     left: 0;
 }
 /* End Header  */
+
+/* Start Landing */
+
+.landing {
+
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 72px);
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 72px);
+    background-color: #e4e4e4ab;
+    z-index: -1;
+    transform: skewY(-7deg);
+    top: -30px;
+    transform-origin: top left;
+}
+
+
+.landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    
+}
+
+.landing .container .text{
+    flex: 1;
+    max-width: 500px;
+}
+
+.landing .container h1{
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: -2px;    
+}
+
+.landing .container p {
+    font-size: 23px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+    color: #666;
+    max-width: 500px;
+}
+
+.landing .container .landing-image {
+    width: 600px;
+}
+.landing .container .landing-image img{
+    max-width: 100%;
+} 
+
+
+
+
+/* End Landing */
