@@ -164,6 +164,24 @@ a {
 .header .mega-menu > .image img{
     max-width: 100%;
 }
+@media(max-width: 991px){
+    .header .mega-menu > .image {
+        display: none;
+    }
+    .header .mega-menu > ul{
+        flex: 1;
+    }
+}
+@media(max-width: 768px){
+    .header .mega-menu {
+        flex-direction: column;
+        gap: 0px;
+        text-align: center;
+    }
+    .header .mega-menu > ul:first-of-type > li:last-child{
+        border-bottom: 1px solid #e9e6e6;
+    }
+}
 
 .header .mega-menu > ul {
     min-height: 260px;
