@@ -342,3 +342,65 @@ a {
     }
   }
 /* End Landing */
+
+/* Start Articles */
+
+.articles {
+    background-color: white;
+}
+.articles .main-heading{
+    position: relative;
+}
+
+.articles .main-title{
+    margin: 0;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    font-weight: 800;
+    font-size: 26px;
+    width: fit-content;
+    padding: 15px 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+}
+
+.articles .main-title:hover{
+    animation: var(--main-transition) hold 2s forwards;
+}
+
+@keyframes hold {
+    0%{
+        color: black;
+    }
+    100%{
+        color: white;
+        background-color: #666;
+        border: none;
+
+    }
+}
+
+.articles .main-title::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    left: -20%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.articles .main-heading:hover .main-title::before{
+    transition: 1.7s;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    z-index: -1;
+}
+/* End Articles */
