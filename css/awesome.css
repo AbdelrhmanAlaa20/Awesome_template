@@ -91,6 +91,35 @@ a {
     border: 2px solid white;
     transition-delay: 0.5s;
   }
+
+@keyframes left-move {
+    50% {
+      left: 0;
+      width: 12px;
+      height: 12px;
+    }
+    100% {
+      left: 0;
+      border-radius: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+  @keyframes right-move {
+    50% {
+      right: 0;
+      width: 12px;
+      height: 12px;
+    }
+    100% {
+      right: 0;
+      border-radius: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+
 /* Global Rules  */
 
 
@@ -386,32 +415,75 @@ a {
 /* End Landing */
 
 /* Start Articles */
-@keyframes left-move {
-    50% {
-      left: 0;
-      width: 12px;
-      height: 12px;
-    }
-    100% {
-      left: 0;
-      border-radius: 0;
-      width: 50%;
-      height: 100%;
-    }
-  }
-  @keyframes right-move {
-    50% {
-      right: 0;
-      width: 12px;
-      height: 12px;
-    }
-    100% {
-      right: 0;
-      border-radius: 0;
-      width: 50%;
-      height: 100%;
-    }
-  }
 
+.articles{
 
+}
+
+.articles .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.articles .box{
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform var(--main-transition), box-shadow var(--main-transition) ;
+
+}
+.articles .box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+
+.articles .box img{
+    width: 100%; /*this will force images to be 100% width in case images changed with others of another resolution*/
+    max-width: 100%;
+}
+
+.articles .content{
+    padding: 20px;
+}
+
+.articles .content h3{
+    margin: 0;
+}
+
+.articles .content p{
+    margin: 10px 0 0;
+    line-height: 1.5;
+    color: #777;
+}
+
+.articles .info{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e6e6e7;
+}
+
+.articles .info:hover i{
+    animation: to-right 0.6s linear infinite;
+}
+
+.articles .info a{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.articles .info i{
+    color: var(--main-color);
+}
+
+@keyframes to-right {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(10px);
+    }
+}
 /* End Articles */
