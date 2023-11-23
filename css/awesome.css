@@ -648,7 +648,7 @@ a {
 .features .quality a{
   background: linear-gradient(to right, #f44036 50%, white 50%);
   background-size: 200% 100%;
-  background-position: 199.2% top;
+  background-position: 200% top;
   border-color: red;
 }
 .features .quality:hover a{
@@ -691,7 +691,7 @@ a {
   color: #03a9f4;
   border-color: #03a9f4;
   background: linear-gradient(to top, #03a9f4 50%, white 50%);
-  background-size: 100% 200.5%;
+  background-size: 100% 200%;
   background-position: right top;
 }
 .features .passion:hover a {
