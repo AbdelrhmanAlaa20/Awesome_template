@@ -101,7 +101,7 @@ a {
   100% {
     left: 0;
     border-radius: 0;
-    width: 50%;
+    width: calc(50% + 1px);
     height: 100%;
   }
 }
@@ -544,3 +544,157 @@ a {
   }
 }
 /* End Gallery */
+
+.features{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+
+.features .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.features .box {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.features .box .img-holder{
+  position: relative;
+  overflow: hidden;
+
+}
+.features .box .img-holder::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 100%;
+  height: 100%;
+}
+
+.features .box .img-holder::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 170px 600px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+}
+
+.features .box:hover .img-holder::after {
+  border-width: 170px 500px 170px 0;
+}
+
+.img-holder > div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.features .img-holder img{
+  max-width: 100%;
+}
+
+.features .box h2{
+  position: relative;
+  width: fit-content;
+  font-size: 40px;
+  margin: auto;
+}
+
+.features .box h2::before{
+  content: "";
+  width: 70%;
+  height: 4px;
+  position: absolute;
+  bottom: -20px;
+  left: 15%;
+}
+
+.features .box p{
+  line-height: 2;
+  font-size: 20px;
+  margin: 30px 0;
+  padding: 25px;
+  color: #777;
+}
+
+.features .box a{
+  display: block;
+  border: 3px solid transparent;
+  border-radius: 6px;
+  width: fit-content;
+  margin: 0 auto 30px;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 30px;
+  transition: var(--main-transition);
+  color: black;
+}
+
+.quality .img-holder > div:first-of-type {
+  background-color:rgb(244 64 54 / 60%) ;
+}
+
+.features .quality h2::before{
+  background-color: #f44036;
+}
+
+.features .quality a{
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: 199.2% top;
+  border-color: red;
+}
+.features .quality:hover a{
+  background-position: left top;
+  color: white;
+}
+
+.time .img-holder > div:first-of-type{
+  background-color: rgb(0 150 136 / 60%);
+}
+
+.features .time h2::before{
+  background-color: #009688;
+
+}
+
+.features .time a{
+  color: #009688;
+  border-color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.features .time:hover a {
+  background-position: left top;
+  color: white;  
+}
+
+.passion .img-holder > div:first-of-type{
+  background-color: rgb(3 169 244 / 60%);
+}
+
+.features .passion h2::before{
+  background-color: #03a9f4;
+
+}
+
+.features .passion a {
+  color: #03a9f4;
+  border-color: #03a9f4;
+  background: linear-gradient(to top, #03a9f4 50%, white 50%);
+  background-size: 100% 200.5%;
+  background-position: right top;
+}
+.features .passion:hover a {
+  background-position: left bottom;
+  color: white;
+}
